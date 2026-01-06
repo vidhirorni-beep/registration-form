@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ID Card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<div class="id-card">
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="University Logo">
-
-    <h2>Choudhary University of Chandigarh</h2>
-    <p><b>Student Identity Card</b></p>
+<div class="container card">
+    <h2>Registration Successful 🎉</h2>
 
     <p><b>Name:</b> {{ name }}</p>
     <p><b>Email:</b> {{ email }}</p>
     <p><b>Phone:</b> {{ phone }}</p>
-    <p><b>Gender:</b> {{ gender }}</p>
 
-    <p style="margin-top:10px;font-size:12px;">
-        Valid for Academic Use Only
-    </p>
+    <a href="/">
+        <button class="btn primary">Go Home</button>
+    </a>
 </div>
 
 </body>
 </html>
+
 
