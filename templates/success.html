@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container card">
-    <h2>Registration Successful 🎉</h2>
+  <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
+  <h2 class="center">Student ID Card</h2>
 
-    <p><b>Name:</b> {{ name }}</p>
-    <p><b>Email:</b> {{ email }}</p>
-    <p><b>Phone:</b> {{ phone }}</p>
+  <div class="id-info">
+    <p><strong>Name:</strong> {{ data.name }}</p>
+    <p><strong>Father's Name:</strong> {{ data.father }}</p>
+    <p><strong>Mother's Name:</strong> {{ data.mother }}</p>
+    <p><strong>Phone:</strong> {{ data.phone }}</p>
+    <p><strong>Email:</strong> {{ data.email }}</p>
+    <p><strong>Gender:</strong> {{ data.gender }}</p>
+  </div>
 
-    <a href="/">
-        <button class="btn primary">Go Home</button>
-    </a>
+  <button class="btn primary" onclick="window.print()">Print ID</button>
+  <a href="/"><button class="btn danger">Home</button></a>
 </div>
 
 </body>
 </html>
+
 
 

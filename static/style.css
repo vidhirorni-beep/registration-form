@@ -1,3 +1,4 @@
+/* General Body */
 body {
     margin: 0;
     padding: 0;
@@ -5,35 +6,47 @@ body {
     background: #f4f6f8;
 }
 
+/* Container */
 .container {
     width: 95%;
     max-width: 400px;
     background: white;
-    padding: 20px;
+    padding: 25px 20px;
     margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Center text */
 .center {
     text-align: center;
 }
 
+/* Logo */
 .logo {
     width: 120px;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 20px;
     margin-bottom: 20px;
 }
 
-input {
+/* Headings */
+h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Inputs & Buttons */
+input, select, textarea {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -44,6 +57,7 @@ input {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 .primary {
@@ -51,12 +65,48 @@ input {
     color: white;
 }
 
+.primary:hover {
+    background: #0b5ed7;
+}
+
 .danger {
     background: #dc3545;
     color: white;
 }
 
-.card {
-    text-align: center;
+.danger:hover {
+    background: #bb2d3b;
 }
+
+/* ID card specific */
+.card p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+/* Responsive for smaller phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .btn, input, select, textarea {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
+
 
