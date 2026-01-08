@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container center">
-  <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
-  <h2>Welcome to Choudhary University of Chandigarh</h2>
+    <img src="{{ url_for('static', filename='logo.png') }}" class="logo" alt="Logo">
 
-  <a href="/register" style="width: 100%;">
-    <button class="btn primary">Registration Form Fill Up</button>
-  </a>
+    <h2>Welcome to Choudhary University of Chandigarh</h2>
 
-  <button class="btn danger" onclick="window.close()">Exit</button>
+    <a href="/register" class="btn primary">
+        Registration Form Fill Up
+    </a>
+
+    <button class="btn danger" onclick="history.back()">
+        Go Back
+    </button>
 </div>
 
 </body>
 </html>
+
 
 
